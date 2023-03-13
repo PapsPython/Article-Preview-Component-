@@ -1,0 +1,222 @@
+:root{
+  --font-size:13px;
+  --dark-grayish-blue: hsl(217, 19%, 35%);
+  --desaturated-dark-blue: hsl(214, 17%, 51%);
+  --grayish-blue: hsl(212, 23%, 69%);
+  --light-grayish-blue: hsl(210, 46%, 95%);
+  --border-radius:10px;
+}
+
+html,body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--light-grayish-blue);
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  font-family: 'Manrope', sans-serif;
+}
+
+*,*::before,*::after{
+  box-sizing: border-box;
+}
+
+img{
+  display:block;
+  margin: 0;
+}
+
+
+.container{
+  max-width:600px;
+  height:auto;
+  display:grid;
+  grid-template-columns:250px 1fr;
+  position:relative;
+}
+
+.image-section{
+  background-image: url("images/drawers.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:left;
+  border-top-left-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius);
+ }
+
+.interiordesign-recommendations{
+  background-color: white;
+  margin:0;
+  padding:30px 40px;
+  border-top-right-radius:var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+  
+}
+
+
+p:first-child{
+  font-weight: 700;
+  margin:0;
+}
+
+p:nth-of-type(even)
+{
+  font-weight: 400;
+  font-size: 12px;
+  margin-top: 3px;;
+}
+
+.designer-details-sharing{
+  display: flex;
+  align-items: center;
+  gap:10px;
+}
+
+.designer-details-sharing img,
+.share-button{
+border-radius:50%;
+  width:30px;
+  align-self: center;
+}
+
+.designer-name-date p{
+  margin:0;
+  font-size: 12px;
+}
+
+.share-button {
+  height: 30px;
+  margin-left: auto;
+  border: 1px solid var(--dark-grayish-blue);
+  background-color:transparent;
+  display: flex;
+}
+
+.share-button:hover, .share-list-icons img:hover{
+  cursor: pointer;
+}
+
+.share-button img{
+  width: 15px;
+  margin:auto;
+}
+
+
+.share-list-icons{
+  display:none;
+  position: absolute;
+  justify-content: space-between;
+  background-color:var(--dark-grayish-blue);
+  width:180px;
+  height: auto;
+  border-radius: 5px;
+  bottom:280px;
+  right:350px;  
+  padding: 15px;
+ }
+
+  .share-list-icons img{
+    align-self: center;
+  }
+
+
+
+.box{
+  display:none;
+  background-color: var(--dark-grayish-blue);
+  width: 15px;
+  height:15px;
+  transform: rotate(-45deg);
+  position: absolute;
+  bottom: 275px;
+  right:430px; 
+}
+
+.add-flex{
+  display: flex;
+}
+
+
+
+
+@media screen and (width < 600px){
+  html,body{
+    padding-top:30px;
+    overflow-x: none;
+  }
+.container{
+  min-width:400px;
+  height:100vh;
+  display:grid;
+  grid-template-rows:38% 58%;
+}
+ 
+.image-section{
+   grid-area: 1/1/2/2;
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+ }
+  
+ .image-section,
+  .interiordesign-recommendations, 
+  .share-list-icons{
+  width: 350px;
+  
+}
+  
+.interiordesign-recommendations{
+  grid-area: 2/1/3/2;
+  padding: 30px 40px;
+  line-height:20px;
+  border-bottom-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+ }
+
+ p:nth-of-type(1),
+  p:nth-of-type(2){
+   margin:15px 0px 20px 0px;
+   text-align: left; 
+  }
+  
+.designer-name-date p,
+  .share-list-icons{
+  margin:0;
+  font-size: 12px;
+}
+  
+.share-list-icons{
+  height: auto;
+  border-bottom-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+  bottom:-10px;
+  padding: 10px;
+  left:50px;
+ }
+
+  .box{
+    bottom: -5px;
+    left:80px;
+  }
+  
+ #second-button{
+  border-radius:50%;
+  width:30px;
+  align-self: center;
+  height: 30px;
+  margin-left: auto;
+  border: 1px solid var(--dark-grayish-blue);
+  background-color:var(--desaturated-dark-blue);
+ }
+  
+  #second-button img{
+   filter: brightness(0) invert(100%);
+  }
+
+  
+}
+
+
+
+

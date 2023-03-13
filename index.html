@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+   <main class="container">
+      <section class="image-section">
+      <!-- <img src="images/drawers.jpg" alt="image of vase placed on drawwer"> -->
+      </section>  
+    
+      <section class="interiordesign-recommendations">
+         <div class="centre-recommendations">
+        <p>Shift the overall look and feel by adding these wonderful touches to furniture in your home</p>
+        <p> Ever been in a room and felt like something was missing? Perhaps it felt slightly bare and uninviting. I've got some simple tips to help you make any room complete</p>
+       <div class = "designer-details-sharing">
+             <img  src="images/avatar-michelle.jpg" alt="image of michelle">
+            <div class = "designer-name-date">
+              <p> Michelle Appleton</p>
+              <p>29 Jun 2020</p>
+           </div>  
+           <button class="share-button" id="share-button">
+            <img src="images/icon-share.svg" alt="a share icon">
+           </button>   
+        </div> 
+      </div>
+      </section>  
+        
+    </main>
+
+  <div class="share-list-icons" data-btn="23">
+      <p>SHARE</p>
+      <img src="images/icon-facebook.svg" alt="facebook">
+      <img src="images/icon-twitter.svg" alt="twitter">
+      <img src="images/icon-pinterest.svg" alt="pinterest">
+  </div>  
+  <div class="box"></div>
+    
+  
+  <script>
+     const shareBtn = document.getElementById("share-button")
+      let x = window.matchMedia("(max-width: 600px)")  
+      
+ function showShareLinks(){
+   
+  if(x.matches){
+      document.querySelector(".share-list-icons").innerHTML += `
+     <button id="second-button">
+            <img src="images/icon-share.svg" alt="a share icon">
+      </button> `
+    document.getElementById("second-button").style.margin = "0"
+    } 
+   
+ document.querySelector(".share-list-icons").classList.toggle("add-flex")
+document.querySelector(".box").classList.toggle("add-flex")
+   
+ }   
+   shareBtn.addEventListener("click",showShareLinks) 
+
+   //remove Display from share link on mobile 
+//     document.getElementById("second-button").addEventListener("click",removedisplay)
+    
+// function removedisplay(e){
+//   document.querySelector(".share-list-icons").classList.remove("add-flex")
+// document.querySelector(".box").classList.remove("add-flex")
+// }
+    
+    
+
+
+    
+    
+  </script>
+
+  <!--
+  This script places a badge on your repl's full-browser view back to your repl's cover
+  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
+  teal, blue, blurple, magenta, pink!
+  -->
+  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+</body>
+
+</html>
